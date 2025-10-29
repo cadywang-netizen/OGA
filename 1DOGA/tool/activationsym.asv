@@ -1,0 +1,19 @@
+function result = activationsym(x,y,w1,w2,b,theta,k,thea)%syms R; 
+    ptsbr = 15;
+    rectangle = [0,thea];
+    [theatemp,wei] = rquadpts1dnew(rectangle,ptsbr,N);
+    ctheatemp=cos(theatemp');
+    stheatemp=sin(theatemp');
+    for sss = 1:ptsbr
+
+           tempx=ctheatemp(sss)*x+stheatemp(sss)*y;
+           tempy=ctheatemp(sss)*x-stheatemp(sss)*y;
+           Bbctemp = [tempx;tempy;ones(size(quadx1bc.xqd))];
+    
+           ckbctemp = ak*Bbctemp;
+           Cbctemp(k,:) = ckbctemp;
+           gbctemp =gbctemp+ wei(sss)*activation(Cbctemp(1:k,:));
+    
+    end
+    result=0;
+    
