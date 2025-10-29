@@ -45,15 +45,3 @@ Approximation plots (u_N vs. exact u)
 Convergence tables in L² and H¹ norms
 Theoretical vs. observed convergence orders
 
-Repository structure is along the lines like this:  
-1DOGA/
-│
-├── gradientdescent.m          # Gradient computation
-├── initialguess.m             # Initialization by enumeration
-├── activation_functions.m     # ReLU, dReLU, sigmoid, derivatives
-├── quadpts1d.m                # Gaussian quadrature utilities
-├── datacos1d.m                # Example PDE test case
-├── main_OGA_script.m          # Full iterative solver
-├── displaytable.m, disptable.m# Output formatting utilities
-└── README.md                  # Documentation
-
